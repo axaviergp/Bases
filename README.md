@@ -1,0 +1,2 @@
+# Bases
+First angular project
