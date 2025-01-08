@@ -3,17 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counter/counter.component';
+import { CounterModule } from './counter/counter.module';
+import { DbzModule } from './dbz/dbz.module';
+import { HeoresModule } from './heroes/heroes.module';
+
 
 @NgModule({
   declarations: [
     // Se usa el nombre de la clase
     AppComponent,
-    CounterComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    CounterModule,
+    DbzModule,
+    HeoresModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
