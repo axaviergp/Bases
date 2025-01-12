@@ -9,17 +9,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ListComponent {
 
   @Input()
-  public characterList: Character[] = [
-    {
-      name: 'Trunks',
-      power: 10
-    }
-  ]
+  public characterList: Character[] = []
   @Output()
-  onDelete: EventEmitter<number> = new EventEmitter();
+  onDelete: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(index: number): void {
-    console.log('Delete character', index);
-    this.onDelete.emit(index);
+  onDeleteCharacter(id?: string): void {
+    if (!id) {
+      return;
+    }
+    this.onDelete.emit(id);
   }
 }
